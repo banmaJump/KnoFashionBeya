@@ -8,7 +8,7 @@ module.exports = merge(common, {
   mode: 'production',
   devtool: 'source-map',
   output: {
-    publicPath: '/KnoFashionBeya/',  // この行を追加
+    publicPath: '/KnoFashionBeya/static/',  // この行を追加
   },
   optimization: {
     minimize: true,
