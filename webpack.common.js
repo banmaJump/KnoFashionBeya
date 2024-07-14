@@ -37,7 +37,7 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           filename: 'images/[name].[hash][ext]',  // パスの設定
-          publicPath: '/KnoFashionBeya/static/images/',          // 画像ファイルの公開パスを設定
+          publicPath: '/KnoFashionBeya/static/images/',
         },
       },
     ],
