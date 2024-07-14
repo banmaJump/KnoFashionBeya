@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'public/static'),
     filename: 'js/bundle.[contenthash].js',
-    publicPath: '/KnoFashionBeya/static/',  
+    publicPath: '/KnoFashionBeya/public/static/',  
   },
   module: {
     rules: [
@@ -37,7 +37,7 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           filename: 'images/[name].[hash][ext]',  // パスの設定
-          publicPath: '/KnoFashionBeya/static/images/',          // 画像ファイルの公開パスを設定
+          publicPath: '/KnoFashionBeya/public/static/images/',          // 画像ファイルの公開パスを設定
         },
       },
     ],
