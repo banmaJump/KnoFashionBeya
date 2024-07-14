@@ -1,31 +1,24 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebpackAssetsManifest = require('webpack-assets-manifest');
+const path = require('path');
 
 module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'public/static'),
     filename: 'js/bundle.[contenthash].js',
-    publicPath: '/KnoFashionBeya/static/',  
+    publicPath: '/KnoFashionBeya/static/',
   },
   module: {
     rules: [
       {
         test: /\.css$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.scss$/i,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(js|jsx)$/,
@@ -36,7 +29,7 @@ module.exports = {
         test: /\.(gif|png|jpg|svg)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'images/[name].[hash][ext]',  
+          filename: 'images/[name].[hash][ext]',
           publicPath: '/KnoFashionBeya/static/images/',
         },
       },
@@ -44,8 +37,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/template.html',  // template.html を public フォルダに保持
-      filename: '../index.html',
+      template: './public/template.html',
+      filename: path.resolve(__dirname, 'public', 'index.html'), // 修正
       inject: 'body',
     }),
     new MiniCssExtractPlugin({
@@ -60,6 +53,7 @@ module.exports = {
     extensions: ['.js', '.jsx'],
   },
 };
+
 
 
 
