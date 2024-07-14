@@ -1,7 +1,7 @@
 const { merge } = require('webpack-merge');
 const common = require('./webpack.common.js');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const webpack = require('webpack');
 
 module.exports = merge(common, {
@@ -51,9 +51,9 @@ module.exports = merge(common, {
     },
   },
   plugins: [
-    new CleanWebpackPlugin({
-     cleanOnceBeforeBuildPatterns: ['**/*'], 
-    }),
+    // new CleanWebpackPlugin({
+    //  cleanOnceBeforeBuildPatterns: ['**/*'], 
+    // }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
