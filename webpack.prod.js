@@ -8,7 +8,7 @@ module.exports = merge(common, {
   mode: 'production',
   devtool: 'source-map',
   output: {
-    publicPath: '/KnoFashionBeya/public/static/',  // この行を追加
+    publicPath: '/KnoFashionBeya/public/static/',
   },
   optimization: {
     minimize: true,
@@ -27,7 +27,7 @@ module.exports = merge(common, {
     ],
     splitChunks: {
       chunks: 'all',
-      maxSize: 200000, 
+      maxSize: 200000,
       cacheGroups: {
         vendors: {
           test: /[\\/]node_modules[\\/]/,
@@ -55,13 +55,14 @@ module.exports = merge(common, {
   },
   plugins: [
     new CleanWebpackPlugin({
-     cleanOnceBeforeBuildPatterns: ['**/*'], 
+      cleanOnceBeforeBuildPatterns: ['**/*'],
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
   ],
 });
+
 
 // const { merge } = require('webpack-merge');
 // const common = require('./webpack.common.js');
