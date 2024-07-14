@@ -1,0 +1,52 @@
+<!-- header.ejs -->
+<header>
+  <div class="header-content">
+    <h1 class="site-title">Kのファッション部屋</h1>
+    <button class="hamburger-menu" onclick="toggleMenu()">
+      ☰
+    </button>
+  </div>
+  <nav class="slide-menu" id="slideMenu">
+    <div class="search-box">
+      <form class="search-form" onsubmit="handleSearchSubmit(event)">
+        <input type="text" id="searchQuery" placeholder="検索中・・・" oninput="handleSearchChange(event)">
+        <button type="submit">Search</button>
+      </form>
+      <ul class="search-suggestions" id="searchSuggestions"></ul>
+    </div>
+  </nav>
+</header>
+<script>
+  let menuOpen = false;
+
+  function toggleMenu() {
+    menuOpen = !menuOpen;
+    document.getElementById('slideMenu').classList.toggle('open', menuOpen);
+  }
+
+  async function handleSearchChange(event) {
+    const query = event.target.value;
+    const suggestions = document.getElementById('searchSuggestions');
+
+    if (query.length > 0) {
+      try {
+        const response = await fetch(`/api/search?query=${query}`);
+        const data = await response.json();
+        suggestions.innerHTML = data.slice(0, 10).map(suggestion => `
+          <li>
+            <a href="/details/${suggestion.id}">${suggestion.title}</a>
+          </li>
+        `).join('');
+      } catch (error) {
+        console.error('Error fetching search suggestions:', error);
+      }
+    } else {
+      suggestions.innerHTML = '';
+    }
+  }
+
+  function handleSearchSubmit(event) {
+    event.preventDefault();
+    // 検索ボタンがクリックされたときに実行される処理をここに追加
+  }
+</script>

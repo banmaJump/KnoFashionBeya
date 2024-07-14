@@ -1,0 +1,17 @@
+<div class="news-container">
+  <h1>News</h1>
+  <% if (articles.length === 0) { %>
+    <p>記事が見つかりません。</p>
+  <% } else { %>
+    <div class="slider">
+      <% articles.forEach(article => { %>
+        <div>
+          <img src="<%= article.image_url %>" alt="<%= article.title %>" />
+          <h3><%= article.title %></h3>
+          <p><%= article.title_content %></p>
+          <p><%= article.genre %></p>
+        </div>
+      <% }) %>
+    </div>
+  <% } %>
+</div>
