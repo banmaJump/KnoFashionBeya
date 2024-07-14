@@ -44,7 +44,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/template.html',  // 修正されたパス
+      template: './public/template.html',
       filename: '../index.html',
       inject: 'body',
     }),
