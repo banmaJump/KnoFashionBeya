@@ -2,17 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const WebpackAssetsManifest = require('webpack-assets-manifest');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const TerserWebpackPlugin = require('terser-webpack-plugin');
-const webpack = require('webpack');
 
 module.exports = {
-  mode: 'production',
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'public'),
-    filename: 'static/js/bundle.[contenthash].js',
-    publicPath: '/KnoFashionBeya/',  // 修正されたpublicPath
+    path: path.resolve(__dirname, 'public/static'),
+    filename: 'js/bundle.[contenthash].js',
+    publicPath: '/KnoFashionBeya/static/',  
   },
   module: {
     rules: [
@@ -40,72 +36,28 @@ module.exports = {
         test: /\.(gif|png|jpg|svg)$/,
         type: 'asset/resource',
         generator: {
-          filename: 'static/images/[name].[hash][ext]',  // パスの設定
+          filename: 'images/[name].[hash][ext]',  
           publicPath: '/KnoFashionBeya/static/images/',
         },
       },
     ],
   },
   plugins: [
-    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './public/template.html',
-      filename: 'index.html',  // ルートに生成
+      template: './public/template.html',  // template.html を public フォルダに保持
+      filename: '../index.html',
       inject: 'body',
     }),
     new MiniCssExtractPlugin({
-      filename: 'static/styles/[name].[contenthash].css',
+      filename: 'styles/[name].[contenthash].css',
     }),
     new WebpackAssetsManifest({
       output: 'asset-manifest.json',
       publicPath: true,
     }),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production'),
-    }),
   ],
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new TerserWebpackPlugin({
-        terserOptions: {
-          ecma: 5,
-          compress: {
-            drop_console: true,
-          },
-          output: {
-            comments: false,
-          },
-        },
-      }),
-    ],
-    splitChunks: {
-      chunks: 'all',
-      maxSize: 200000,
-      cacheGroups: {
-        vendors: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
-        },
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true,
-        },
-      },
-    },
-  },
-  performance: {
-    hints: 'warning',
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000,
-  },
   resolve: {
     extensions: ['.js', '.jsx'],
-    fallback: {
-      process: require.resolve('process/browser'),
-    },
   },
 };
 

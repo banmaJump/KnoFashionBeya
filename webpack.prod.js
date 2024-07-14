@@ -7,9 +7,6 @@ const webpack = require('webpack');
 module.exports = merge(common, {
   mode: 'production',
   devtool: 'source-map',
-  output: {
-    publicPath: '/KnoFashionBeya/static/',  // この行を追加
-  },
   optimization: {
     minimize: true,
     minimizer: [
