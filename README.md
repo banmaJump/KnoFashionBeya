@@ -1,6 +1,6 @@
-  
-※このリポジトリは、開発用です。[**https://banmajump.github.io/KnoFashionBeya/**]に表示するためだけに設定されたものなので、ローカル環境では表示されません。  
-
+ ※このリポジトリは、開発用です。[**https://banmajump.github.io/KnoFashionBeya/**]に表示するためだけに設定されたものなので、ローカル環境では表示されません。  
+<br>
+<br> 
 # 日本語  
 
 このウェブサイトは、YouTubeチャンネル「Kのファッション部屋」の動画コンテンツを基に、より深くファッションの世界を探求できるインタラクティブなプラットフォームです。動画では伝えきれない情報を記事形式で発信し、ユーザー体験の向上を目指しています。  
@@ -32,47 +32,47 @@
 # English
 
 This website is an interactive platform where you can delve deeper into the world of fashion, based on the video content of the YouTube channel "K_Fashion_Room". We aim to enhance the user experience by providing information in article format that cannot be fully conveyed through videos.  
-
+<br> 
 ***Objectives***
-
+  &emsp;
   #### Boost merchandise sales:  
-   We strive for UI/UX design that maximizes the appeal of products and encourages purchase.  
+   &emsp;&emsp;We strive for UI/UX design that maximizes the appeal of products and encourages purchase.  
+   &emsp;
   #### Implement diverse designs:  
-   The site is designed to flexibly incorporate various design elements for future UI enhancements.  
-
-***Access***  
-
-  &emsp; You can access the website from the following URL: https://banmajump.github.io/KnoFashionBeya/  
-
-***About the GitHub Repository***  
-
+   &emsp;&emsp;The site is designed to flexibly incorporate various design elements for future UI enhancements.  
+<br> 
+***Access***   
+  &emsp; You can access the website from the following URL: https://banmajump.github.io/KnoFashionBeya/
+<br>
+<br>
+***About the GitHub Repository***
+  &emsp;
   #### This repository:  
-  &emsp; This is a development repository and will not work if installed directly.  
-  &emsp; For more information, please refer to the README of “KnoFashionBeya-forProduction”.
+  &emsp;&emsp;This is a development repository and will not work if installed directly.  
+  &emsp;&emsp;For more information, please refer to the README of “KnoFashionBeya-forProduction”.  
+  &emsp;
   #### KnoFashionBeya-forProduction:
-  &emsp; This is the repository that can be installed and run.  
-  &emsp; Detailed implementation instructions are provided there.Please check it out.  
+  &emsp;&emsp; This is the repository that can be installed and run.  Detailed implementation instructions are provided there.Please check it out.  
 <br>  
 <br>  
 <br>  
-# 中文
-  
-  &emsp;&emsp;本网站是一个基于YouTube频道“K部长的时尚部屋”视频内容的互动平台，让您可以更深入地探索时尚世界。我们旨在通过以文章形式提供视频无法完全传达的信息来提升用户体验。  
-  
-***网站目标***
-  
-  #### 促进商品销售:
-   &emsp;&emsp;我们致力于追求UI/UX设计，最大限度地展现商品魅力，激发购买欲望。  
-  #### 实现多样化设计:
-　　本网站采用灵活的设计，以便将来能够轻松融入各种设计元素，提升UI。  
-  
-***访问***
-   您可以通过以下URL访问网站：https://banmajump.github.io/KnoFashionBeya/
-  
-***关于GitHub仓库***  
+# <span>中文</span>
+<br>
+&emsp;&emsp;本网站是一个基于YouTube频道“K部长的时尚部屋”视频内容的互动平台，让您可以更深入地探索时尚世界。我们旨在通过以文章形式提供视频无法完全传达的信息来提升用户体验。
+<br>
 
- #### 本仓库:
-  　　这是开发用仓库，直接安装无法运行。详细信息请参阅'KnoFashionBeya-forProduction'的README。  
- #### KnoFashionBeya-forProduction:
-  　　这是可安装并运行的仓库。其中包含详细的实现方法。请检查一下。
-  
+### <span>网站目标：</span>
+#### &emsp;<span>促进商品销售:</span>
+&emsp;&emsp;我们致力于追求UI/UX设计，最大限度地展现商品魅力，激发购买欲望。
+#### &emsp;<span>实现多样化设计:</span>
+&emsp;&emsp;本网站采用灵活的设计，以便将来能够轻松融入各种设计元素，提升UI。
+<br>
+### <span>访问：</span>
+&emsp;&emsp;您可以通过以下URL访问网站：<a href="https://banmajump.github.io/KnoFashionBeya/">https://banmajump.github.io/KnoFashionBeya/</a>
+<br>
+### <span>关于GitHub仓库</span>
+#### &emsp;<span>本仓库:</span>
+&emsp;&emsp;这是开发用仓库，直接安装无法运行。详细信息请参阅'KnoFashionBeya-forProduction'的README。
+#### &emsp;<span>KnoFashionBeya-forProduction:</span>
+&emsp;&emsp;这是可安装并运行的仓库。其中包含详细的实现方法。请检查一下。
+<br>
